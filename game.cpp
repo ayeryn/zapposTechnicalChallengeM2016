@@ -7,7 +7,7 @@ using namespace std;
 
 //Rulebook - check
 //1-player game - check
-//publisher - github
+//publisher (github) - check
 //multiple levels of difficulty - check
 
 string eWords [5] = {"university", "department", "incredible", "unbelievable", "spetacular"};
@@ -162,17 +162,17 @@ void intro(void){
 }
 
 void rulebook(){
-	cout<<"Rulebook:"<<endl;
-	cout<<"This is a game of hangman without the man because we are nice people. There are three levels of difficulty:"<<endl; 
-	cout<<"Easy: the word has MORE than 8 letters; use gets one hint; game ends after user's 7th wrong guess."<<endl;
-	cout<<"Medium: words has MORE than 5 letters; there will be no hint; game ends after user's 5th wrong guess."<<endl;
-	cout<<"Hard: words has LESS than 5 letters; there will be no hints; game ends after user's 5th wrong guess."<<endl<<endl;
-	cout<<"To use your hint, enter 'H'. The program will not double-check your decision. Other than that, the program will let you know if your input is invalid and keeps asking until a valid input is provided."<<endl<<endl;
-	cout<<"After a game ends, you will have a chance to start a new game ro exit. Enjoy the game!"<<endl<<endl;
+  cout<<"Rulebook:"<<endl;
+  cout<<"This is a game of hangman without the man because we are nice people. There are three levels of difficulty:"<<endl; 
+  cout<<"Easy: the word has MORE than 8 letters; use gets one hint; game ends after user's 7th wrong guess."<<endl;
+  cout<<"Medium: words has MORE than 5 letters; there will be no hint; game ends after user's 5th wrong guess."<<endl;
+  cout<<"Hard: words has LESS than 5 letters; there will be no hints; game ends after user's 5th wrong guess."<<endl<<endl;
+  cout<<"To use your hint, enter 'H'. The program will not double-check your decision. Other than that, the program will let you know if your input is invalid and keeps asking until a valid input is provided."<<endl<<endl;
+  cout<<"After a game ends, you will have a chance to start a new game ro exit. Enjoy the game!"<<endl<<endl;
 }
 
 int main(){
-	rulebook();
+  rulebook();
   intro();	
   return 0;
 }

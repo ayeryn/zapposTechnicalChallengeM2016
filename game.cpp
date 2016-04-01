@@ -22,6 +22,7 @@ bool hint;
 int level;
 
 void intro();
+void runGame();
 
 void easterEgg(){
 	runGame(level);
@@ -162,7 +163,7 @@ void intro(void){
     if (diff == "Medium" || diff == "medium"){
       levelSelected = true;
       chances = 5;
-      level=1
+      level=1;
       runGame (1);
     }
     if (diff == "Hard" || diff == "hard"){

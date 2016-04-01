@@ -10,14 +10,22 @@ using namespace std;
 //publisher (github) - check
 //multiple levels of difficulty - check
 
+/* Kyle: (Java)Zig-Zag-Zoe wrapped in a story. Someone makes commentary throughout the game.*/
+/* Manasa: (HTML and JS) Guess who it is. Get a blurred picture of a person and get points if answered it right*/
+/*Kishan: (C#) Roll a ball: roll a ball into objects and get points if pick up objects */
+
 string eWords [5] = {"university", "department", "incredible", "unbelievable", "spetacular"};
 string mWords [5] = {"computer", "science", "longhorn", "cherry", "program"};
 string hWords [5] = {"pink", "year", "oil", "zip", "numb"};
 int chances;
 bool hint;
+int level;
 
 void intro();
 
+void easterEgg(){
+	runGame(level);
+}
 
 string rightGuess(string tgt, string guess, char input){
   if(input == 'H') return guess;
@@ -97,7 +105,8 @@ void hangman(string tgt){
 	  hint = false;
 	}
 	else {
-	  cout << "You already used your hint!"<<endl;
+	  cout << "You already used your hint! Easter Egg hit! Game restarted!"<<endl;
+	  easterEgg();
 	  count--;
 	}
       }
@@ -129,6 +138,8 @@ void runGame (int level){
   hangman(tgt);
 }
 
+
+
 void intro(void){
   string user, diff;
   hint = true;
@@ -145,16 +156,19 @@ void intro(void){
     if (diff == "Easy" || diff == "easy" ){
       levelSelected = true;
       chances = 7;
-      runGame(0);
+      level = 0;
+      runGame(level);
     }
     if (diff == "Medium" || diff == "medium"){
       levelSelected = true;
       chances = 5;
+      level=1
       runGame (1);
     }
     if (diff == "Hard" || diff == "hard"){
       levelSelected = true;
       chances = 5;
+      level=2;
       runGame(2);
     }
     else cout << "Invalid input! Please enter easy, medium, or hard" << endl;

@@ -22,7 +22,7 @@ bool hint;
 int level;
 
 void intro();
-void runGame();
+void runGame(int level);
 
 void easterEgg(){
 	runGame(level);
